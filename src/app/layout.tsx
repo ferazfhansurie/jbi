@@ -5,14 +5,25 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const inter = Inter({
-  variable: "--font-geist-sans",
   subsets: ["latin"],
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
   title: "JBI - Johor Bahru Integrated Sdn. Bhd.",
-  description: "Premier Johor-based integrated maritime and logistics company delivering sustainable impact across seas, borders, and communities.",
-  keywords: ["JBI", "Johor Bahru Integrated", "maritime", "logistics", "ferry terminal", "barter trade", "ship-to-ship", "telecommunications"],
+  description: "Syarikat infrastruktur strategik, logistik, maritim, dan fasilitasi ekonomi berpangkalan di Johor, Malaysia",
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+    userScalable: true,
+  },
+  themeColor: '#002B5C',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'JBI',
+  },
 };
 
 export default function RootLayout({
@@ -21,10 +32,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.variable} antialiased`}>
+    <html lang="ms">
+      <body className={`${inter.variable} antialiased overflow-x-hidden`}>
         <Navbar />
-        {children}
+        <main className="overflow-x-hidden w-full">{children}</main>
         <Footer />
       </body>
     </html>
