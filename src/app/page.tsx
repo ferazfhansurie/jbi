@@ -23,38 +23,38 @@ import LoadingScreen from '@/components/LoadingScreen';
 export default function Home() {
   const services = [
     {
-      title: 'Operasi Maritim & Terminal Feri',
-      description: 'Membangun dan mengendalikan penyelesaian terminal feri di seluruh Johor, menghubungkan ke Singapura, Batam, dan laluan serantau.',
+      title: 'Maritime Operations & Ferry Terminals',
+      description: 'Developing and operating ferry terminal solutions across Johor, connecting to Singapore, Batam, and regional routes.',
       icon: Ship,
       image: '/pillar1.png',
     },
     {
-      title: 'Perdagangan Barter & Logistik Pantai',
-      description: 'Memimpin inisiatif logistik pantai dan perdagangan barter untuk menyokong rantaian bekalan serantau.',
+      title: 'Barter Trade & Coastal Logistics',
+      description: 'Leading coastal logistics and barter trade initiatives to support regional supply chains.',
       icon: TrendingUp,
       image: '/pillar2.png',
     },
     {
-      title: 'Operasi Ship-to-Ship (STS)',
-      description: 'Operasi pemindahan petroleum, kimia, LNG/LPG dalam perairan Johor dengan pematuhan peraturan penuh.',
+      title: 'Ship-to-Ship (STS) Operations',
+      description: 'Petroleum, chemical, LNG/LPG transfer operations in Johor waters with full regulatory compliance.',
       icon: Package,
       image: '/pillar3.png',
     },
     {
-      title: 'Logistik & Pergudangan',
-      description: 'Pembangunan ekosistem gudang berikat, logistik rentas sempadan, dan perkhidmatan rantaian bekalan industri.',
+      title: 'Logistics & Warehousing',
+      description: 'Development of bonded warehouse ecosystems, cross-border logistics, and industrial supply chain services.',
       icon: Warehouse,
       image: '/pillar4.png',
     },
     {
-      title: 'Telekomunikasi & Infrastruktur Digital',
-      description: 'Penyediaan kemudahan rangkaian (NFP), kejuruteraan frekuensi radio, dan penerapan infrastruktur gentian optik.',
+      title: 'Telecommunications & Digital Infrastructure',
+      description: 'Provision of network facilities (NFP), radio frequency engineering, and fiber optic infrastructure deployment.',
       icon: Wifi,
       image: '/pillar5.png',
     },
     {
-      title: 'Fasilitasi Pelaburan',
-      description: 'Khidmat nasihat strategik dan penyelarasan agensi kerajaan untuk pelabur domestik dan asing.',
+      title: 'Investment Facilitation',
+      description: 'Strategic advisory services and government agency coordination for domestic and foreign investors.',
       icon: Handshake,
       image: '/pillar6.png',
     },
@@ -68,9 +68,9 @@ export default function Home() {
   ];
 
   const stats = [
-    { value: '2025', label: 'Edisi' },
-    { value: '6+', label: 'Teras Perniagaan' },
-    { value: '100%', label: 'Berasaskan Johor' },
+    { value: '2025', label: 'Edition' },
+    { value: '6+', label: 'Business Pillars' },
+    { value: '100%', label: 'Johor Based' },
   ];
 
   return (
@@ -107,12 +107,12 @@ export default function Home() {
         
 
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight px-4 max-w-full break-words">
-              Mengintegrasikan Lautan, Perdagangan <br className="hidden sm:block"/>
-              <span className="text-[#D00C27]">& Teknologi</span> untuk Masa Depan Johor
+              Integrating Oceans, Trade <br className="hidden sm:block"/>
+              <span className="text-[#D00C27]">& Technology</span> for Johor's Future
             </h1>
 
             <p className="text-base sm:text-lg md:text-xl text-gray-200 mb-6 sm:mb-8 max-w-2xl mx-auto font-light px-4">
-              Syarikat maritim dan logistik bersepadu terkemuka berpangkalan di Johor yang memberikan impak mampan.
+              A subsidiary of Johor Bahru Integrated Sdn Bhd - Leading maritime and logistics company delivering sustainable impact.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 px-4">
@@ -122,7 +122,7 @@ export default function Home() {
                   whileTap={{ scale: 0.95 }}
                   className="w-full sm:w-auto bg-[#D00C27] text-white px-6 sm:px-8 py-4 rounded-lg font-bold hover:bg-[#b00a20] transition-colors flex items-center justify-center space-x-2 min-w-[180px] text-sm sm:text-base uppercase tracking-wide shadow-lg"
                 >
-                  <span>Terokai Perkhidmatan</span>
+                  <span>Explore Services</span>
                   <ChevronRight size={20} />
                 </motion.button>
               </Link>
@@ -133,7 +133,7 @@ export default function Home() {
                   className="w-full sm:w-auto bg-transparent border-2 border-white text-white px-6 sm:px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-[#002B5C] transition-all flex items-center justify-center space-x-2 min-w-[180px] text-sm sm:text-base uppercase tracking-wide"
                 >
                   <Phone size={20} />
-                  <span>Hubungi Kami</span>
+                  <span>Contact Us</span>
                 </motion.button>
               </Link>
             </div>
@@ -175,13 +175,13 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12 px-4"
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#002B5C] mb-4 sm:mb-6">Gambaran Korporat</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#002B5C] mb-4 sm:mb-6">Corporate Overview</h2>
             <div className="w-16 sm:w-20 h-1 bg-[#D00C27] mx-auto mb-6 sm:mb-8"></div>
             <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
-              Johor Bahru Integrated Sdn. Bhd. (JBI) adalah sebuah syarikat infrastruktur strategik, logistik, maritim, dan fasilitasi ekonomi yang berpangkalan di Johor, Malaysia. JBI memberi tumpuan kepada pengukuhan daya saing serantau Johor melalui penyelesaian bersepadu merentas operasi terminal feri, logistik pantai, aktiviti kapal-ke-kapal, perdagangan barter, zon ekonomi khas, dan infrastruktur digital/telekomunikasi.
+              Johor Bahru Integrated Sdn. Bhd. (JBI) is a strategic infrastructure, logistics, maritime, and economic facilitation company based in Johor, Malaysia. JBI focuses on strengthening Johor's regional competitiveness through integrated solutions across ferry terminal operations, coastal logistics, ship-to-ship activities, barter trade, special economic zones, and digital/telecommunications infrastructure.
             </p>
             <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto mt-4">
-              Dengan penglibatan kukuh merentas agensi kerajaan, pelabur, dan rakan industri, JBI menyokong visi Johor untuk menjadi hab maritim dan logistik terkemuka dalam Zon Ekonomi Khas Johor-Singapura (JS-SEZ) dan koridor ekonomi selatan.
+              With strong engagement across government agencies, investors, and industry partners, JBI supports Johor's vision to become a leading maritime and logistics hub within the Johor-Singapore Special Economic Zone (JS-SEZ) and southern economic corridor.
             </p>
           </motion.div>
         </div>
@@ -203,7 +203,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12 sm:mb-16 px-4"
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#002B5C] mb-4">Hala Tuju Kami</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#002B5C] mb-4">Our Direction</h2>
             <div className="w-16 sm:w-20 h-1 bg-[#D00C27] mx-auto"></div>
           </motion.div>
 
@@ -224,10 +224,10 @@ export default function Home() {
                   <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white/10 rounded-xl flex items-center justify-center backdrop-blur-sm">
                     <Target className="text-white" size={28} />
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-bold ml-3 sm:ml-4">Misi</h3>
+                  <h3 className="text-2xl sm:text-3xl font-bold ml-3 sm:ml-4">Mission</h3>
                 </div>
                 <p className="text-base sm:text-lg leading-relaxed text-gray-100">
-                  Untuk mempercepatkan pertumbuhan ekonomi Johor melalui penyelesaian infrastruktur maritim, logistik, dan digital yang inovatif yang mencipta nilai jangka panjang untuk negeri dan pihak berkepentingan.
+                  To accelerate Johor's economic growth through innovative maritime, logistics, and digital infrastructure solutions that create long-term value for the state and stakeholders.
                 </p>
                 <div className="mt-6 h-1 w-20 bg-white/30 group-hover:w-40 transition-all duration-500"></div>
               </div>
@@ -249,10 +249,10 @@ export default function Home() {
                   <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white/10 rounded-xl flex items-center justify-center backdrop-blur-sm">
                     <Eye className="text-white" size={28} />
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-bold ml-3 sm:ml-4">Visi</h3>
+                  <h3 className="text-2xl sm:text-3xl font-bold ml-3 sm:ml-4">Vision</h3>
                 </div>
                 <p className="text-base sm:text-lg leading-relaxed text-gray-100">
-                  Untuk menjadi syarikat maritim dan logistik bersepadu terkemuka yang berasaskan Johor yang memberikan impak mampan merentas lautan, sempadan, dan komuniti.
+                  To become the leading Johor-based integrated maritime and logistics company delivering sustainable impact across oceans, borders, and communities.
                 </p>
                 <div className="mt-6 h-1 w-20 bg-white/30 group-hover:w-40 transition-all duration-500"></div>
               </div>
@@ -273,13 +273,13 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <span className="text-[#D00C27] font-bold tracking-wider uppercase text-xs sm:text-sm mb-2 block">Budaya Kami</span>
+                <span className="text-[#D00C27] font-bold tracking-wider uppercase text-xs sm:text-sm mb-2 block">Our Culture</span>
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#002B5C] mb-4 sm:mb-6 leading-tight">
-                  Prinsip Yang <br/>
-                  <span className="text-[#D00C27]">Mendefinisikan Kami</span>
+                  Principles That <br/>
+                  <span className="text-[#D00C27]">Define Us</span>
                 </h2>
                 <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 leading-relaxed">
-                  Kami mematuhi piawaian tertinggi dalam kelakuan dan prestasi, memastikan setiap projek yang kami laksanakan memberikan nilai yang berkekalan untuk Johor.
+                  We uphold the highest standards in conduct and performance, ensuring every project we undertake delivers lasting value for Johor.
                 </p>
                 <div className="hidden lg:block w-20 h-1.5 bg-[#002B5C] rounded-full"></div>
               </motion.div>
@@ -290,28 +290,28 @@ export default function Home() {
               <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                 {[
                   { 
-                    title: 'Integriti', 
-                    desc: 'Komitmen teguh terhadap ketelusan dan kelakuan beretika dalam semua urusan.',
+                    title: 'Integrity', 
+                    desc: 'Strong commitment to transparency and ethical conduct in all dealings.',
                     icon: Shield
                   },
                   { 
-                    title: 'Perkongsian', 
-                    desc: 'Membina pakatan yang berkekalan dan saling menguntungkan dengan pihak berkepentingan dan komuniti.',
+                    title: 'Partnership', 
+                    desc: 'Building lasting and mutually beneficial alliances with stakeholders and communities.',
                     icon: Handshake
                   },
                   { 
-                    title: 'Impak', 
-                    desc: 'Memberi tumpuan kepada penyelesaian yang mencipta nilai ekonomi yang boleh diukur dan mampan.',
+                    title: 'Impact', 
+                    desc: 'Focusing on solutions that create measurable and sustainable economic value.',
                     icon: Target
                   },
                   { 
-                    title: 'Inovasi', 
-                    desc: 'Mempelopori teknologi pintar dan model infrastruktur yang bersedia untuk masa depan.',
+                    title: 'Innovation', 
+                    desc: 'Pioneering smart technologies and future-ready infrastructure models.',
                     icon: Lightbulb
                   },
                   { 
-                    title: 'Akauntabiliti', 
-                    desc: 'Mengambil pemilikan penuh terhadap hasil, pematuhan, dan kualiti pelaksanaan kami.',
+                    title: 'Accountability', 
+                    desc: 'Taking full ownership of our results, compliance, and execution quality.',
                     icon: CheckCircle
                   },
                 ].map((value, index) => (
@@ -359,11 +359,11 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12 sm:mb-16 lg:mb-20"
           >
-            <span className="text-[#D00C27] font-bold tracking-wider uppercase text-xs sm:text-sm mb-2 block">Kepakaran Kami</span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">Teras Perniagaan</h2>
+            <span className="text-[#D00C27] font-bold tracking-wider uppercase text-xs sm:text-sm mb-2 block">Our Expertise</span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">Business Pillars</h2>
             <div className="w-20 sm:w-24 h-1.5 bg-[#D00C27] mx-auto mb-6 sm:mb-8 rounded-full"></div>
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto font-light px-4">
-              Menyampaikan penyelesaian bersepadu strategik merentas enam teras utama untuk memacu enjin ekonomi Johor.
+              Delivering strategic integrated solutions across six core pillars to drive Johor's economic engine.
             </p>
           </motion.div>
 
@@ -398,7 +398,7 @@ export default function Home() {
                   <p className="text-gray-300 leading-relaxed mb-4 sm:mb-6 text-sm">{service.description}</p>
                   
                   <Link href="/services" className="flex items-center text-[#D00C27] font-semibold text-sm uppercase tracking-wide group/btn cursor-pointer">
-                    <span>Ketahui Lebih Lanjut</span>
+                    <span>Learn More</span>
                     <ChevronRight size={16} className="ml-1 group-hover/btn:translate-x-1 transition-transform" />
                   </Link>
                 </div>
@@ -418,10 +418,10 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12 sm:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#002B5C] mb-4">Rakan Strategik</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#002B5C] mb-4">Strategic Partners</h2>
             <div className="w-16 sm:w-20 h-1 bg-[#D00C27] mx-auto mb-4 sm:mb-6"></div>
             <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto px-4">
-              Bekerjasama dengan badan kerajaan utama dan pemimpin industri untuk memacu pertumbuhan yang mampan.
+              Collaborating with key government bodies and industry leaders to drive sustainable growth.
             </p>
           </motion.div>
 
@@ -451,7 +451,7 @@ export default function Home() {
           </div>
           
           <div className="mt-12 sm:mt-16 text-center">
-             <p className="text-xs sm:text-sm text-gray-400 uppercase tracking-wide sm:tracking-widest px-4">Dipercayai oleh organisasi terkemuka di Johor</p>
+             <p className="text-xs sm:text-sm text-gray-400 uppercase tracking-wide sm:tracking-widest px-4">Trusted by leading organizations in Johor</p>
           </div>
         </div>
       </section>
@@ -469,19 +469,19 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <span className="text-[#D00C27] font-bold tracking-wider uppercase text-xs sm:text-sm mb-2 block">Visi 2030</span>
+              <span className="text-[#D00C27] font-bold tracking-wider uppercase text-xs sm:text-sm mb-2 block">Vision 2030</span>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 leading-tight">
-                Merancang Laluan untuk <br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">Masa Depan Maritim Johor</span>
+                Charting the Path for <br/>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">Johor's Maritime Future</span>
               </h2>
               
               <div className="space-y-4 sm:space-y-6">
                 {[
-                  'Menjadikan Johor sebagai alternatif maritim terkemuka kepada Singapura.',
-                  'Meningkatkan perkapalan pantai dan hubungan Indonesia',
-                  'Menambat aktiviti kapal-ke-kapal dan bunkering di perairan Johor.',
-                  'Menyokong pengembangan rantaian bekalan industri Johor.',
-                  'Menjadi rakan infrastruktur digital utama untuk aset maritim & SEZ.',
+                  'Position Johor as the premier maritime alternative to Singapore.',
+                  'Enhance coastal shipping and Indonesian connectivity',
+                  'Anchor ship-to-ship and bunkering activities in Johor waters.',
+                  'Support expansion of Johor\'s industrial supply chains.',
+                  'Become the key digital infrastructure partner for maritime assets & SEZ.',
                 ].map((direction, index) => (
                   <motion.div
                     key={index}
@@ -503,7 +503,7 @@ export default function Home() {
               
               <div className="mt-8 sm:mt-10">
                 <button className="w-full sm:w-auto bg-white text-[#002B5C] px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors flex items-center justify-center space-x-2 text-sm sm:text-base">
-                  <span>Lihat Peta Jalan Strategik</span>
+                  <span>View Strategic Roadmap</span>
                   <TrendingUp size={20} />
                 </button>
               </div>
@@ -562,28 +562,28 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12 sm:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#002B5C] mb-4">Mengapa Pilih JBI?</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#002B5C] mb-4">Why Choose JBI?</h2>
             <div className="w-16 sm:w-20 h-1 bg-[#D00C27] mx-auto mb-4 sm:mb-6"></div>
             <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto px-4">
-              Rakan terpercaya anda untuk penyelesaian maritim dan logistik bersepadu di Johor.
+              Your trusted partner for integrated maritime and logistics solutions in Johor.
             </p>
           </motion.div>
 
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {[
               {
-                title: 'Lokasi Strategik',
-                desc: 'Akses utama kepada laluan perkapalan utama dan berdekatan dengan Singapura.',
+                title: 'Strategic Location',
+                desc: 'Prime access to major shipping routes and proximity to Singapore.',
                 icon: Target
               },
               {
-                title: 'Penyelesaian Bersepadu',
-                desc: 'Perkhidmatan menyeluruh dari operasi maritim hingga infrastruktur digital.',
+                title: 'Integrated Solutions',
+                desc: 'Comprehensive services from maritime operations to digital infrastructure.',
                 icon: Package
               },
               {
-                title: 'Sokongan Kerajaan',
-                desc: 'Perkongsian kukuh dengan agensi negeri Johor dan badan pengawalseliaan.',
+                title: 'Government Support',
+                desc: 'Strong partnerships with Johor state agencies and regulatory bodies.',
                 icon: Handshake
               }
             ].map((item, index) => (
@@ -617,9 +617,9 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">Mari Bekerjasama</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">Let's Work Together</h2>
             <p className="text-base sm:text-lg lg:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-              Hubungi kami untuk membincangkan bagaimana JBI boleh menyokong projek dan inisiatif anda
+              Contact us to discuss how JBI can support your projects and initiatives
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
               <a href="tel:078277729" className="text-white text-lg sm:text-xl font-bold hover:text-gray-200 transition-colors">
@@ -630,7 +630,7 @@ export default function Home() {
                 info@jbi.com.my
               </a>
             </div>
-            <p className="text-white/80 mt-4 sm:mt-6 text-xs sm:text-sm">Edisi 2025</p>
+            <p className="text-white/80 mt-4 sm:mt-6 text-xs sm:text-sm">Edition 2025</p>
           </motion.div>
         </div>
       </section>

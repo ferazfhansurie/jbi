@@ -6,40 +6,40 @@ import { Ship, TrendingUp, Package, Warehouse, Wifi, Handshake, ChevronRight } f
 export default function Services() {
   const services = [
     {
-      title: 'Operasi Maritim & Terminal Feri',
-      description: 'Membangun dan mengendalikan penyelesaian terminal feri di seluruh Johor, menghubungkan ke Singapura, Batam, dan laluan serantau. Kami memastikan operasi yang lancar dan efisien untuk penumpang dan kargo.',
+      title: 'Maritime Operations & Ferry Terminals',
+      description: 'Developing and operating ferry terminal solutions across Johor, connecting to Singapore, Batam, and regional routes. We ensure smooth and efficient operations for passengers and cargo.',
       icon: Ship,
-      features: ['Pengurusan Terminal', 'Perkhidmatan Feri', 'Penyelenggaraan Fasiliti']
+      features: ['Terminal Management', 'Ferry Services', 'Facility Maintenance']
     },
     {
-      title: 'Perdagangan Barter & Logistik Pantai',
-      description: 'Memimpin inisiatif logistik pantai dan perdagangan barter untuk menyokong rantaian bekalan serantau. Menghubungkan pelabuhan-pelabuhan kecil dan sederhana untuk meningkatkan akses pasaran.',
+      title: 'Barter Trade & Coastal Logistics',
+      description: 'Leading coastal logistics and barter trade initiatives to support regional supply chains. Connecting small and medium ports to enhance market access.',
       icon: TrendingUp,
-      features: ['Logistik Pantai', 'Perdagangan Barter', 'Rantaian Bekalan']
+      features: ['Coastal Logistics', 'Barter Trade', 'Supply Chain']
     },
     {
-      title: 'Operasi Ship-to-Ship (STS)',
-      description: 'Operasi pemindahan petroleum, kimia, LNG/LPG dalam perairan Johor dengan pematuhan peraturan penuh. Menyediakan fasiliti dan kepakaran untuk pemindahan kargo yang selamat.',
+      title: 'Ship-to-Ship (STS) Operations',
+      description: 'Petroleum, chemical, LNG/LPG transfer operations in Johor waters with full regulatory compliance. Providing facilities and expertise for safe cargo transfers.',
       icon: Package,
-      features: ['Pemindahan Petroleum', 'Operasi LNG/LPG', 'Pematuhan Keselamatan']
+      features: ['Petroleum Transfer', 'LNG/LPG Operations', 'Safety Compliance']
     },
     {
-      title: 'Logistik & Pergudangan',
-      description: 'Pembangunan ekosistem gudang berikat, logistik rentas sempadan, dan perkhidmatan rantaian bekalan industri. Menyediakan ruang penyimpanan yang selamat dan sistem pengurusan inventori terkini.',
+      title: 'Logistics & Warehousing',
+      description: 'Development of bonded warehouse ecosystems, cross-border logistics, and industrial supply chain services. Providing secure storage space and modern inventory management systems.',
       icon: Warehouse,
-      features: ['Gudang Berikat', 'Logistik Rentas Sempadan', 'Pengurusan Inventori']
+      features: ['Bonded Warehouses', 'Cross-Border Logistics', 'Inventory Management']
     },
     {
-      title: 'Telekomunikasi & Infrastruktur Digital',
-      description: 'Penyediaan kemudahan rangkaian (NFP), kejuruteraan frekuensi radio, dan penerapan infrastruktur gentian optik. Memastikan kesalinghubungan digital yang pantas dan boleh dipercayai.',
+      title: 'Telecommunications & Digital Infrastructure',
+      description: 'Provision of network facilities (NFP), radio frequency engineering, and fiber optic infrastructure deployment. Ensuring fast and reliable digital connectivity.',
       icon: Wifi,
-      features: ['Infrastruktur NFP', 'Kejuruteraan RF', 'Gentian Optik']
+      features: ['NFP Infrastructure', 'RF Engineering', 'Fiber Optics']
     },
     {
-      title: 'Fasilitasi Pelaburan',
-      description: 'Khidmat nasihat strategik dan penyelarasan agensi kerajaan untuk pelabur domestik dan asing. Membantu pelabur menavigasi landskap perniagaan Johor dengan mudah.',
+      title: 'Investment Facilitation',
+      description: 'Strategic advisory services and government agency coordination for domestic and foreign investors. Helping investors navigate Johor\'s business landscape with ease.',
       icon: Handshake,
-      features: ['Nasihat Strategik', 'Hubungan Kerajaan', 'Penyelarasan Projek']
+      features: ['Strategic Advisory', 'Government Relations', 'Project Coordination']
     },
   ];
 
@@ -54,7 +54,7 @@ export default function Services() {
             animate={{ opacity: 1, y: 0 }}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6"
           >
-            Perkhidmatan Kami
+            Our Services
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -62,7 +62,7 @@ export default function Services() {
             transition={{ delay: 0.2 }}
             className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto px-4"
           >
-            Penyelesaian menyeluruh yang memacu kecekapan dan pertumbuhan merentas sektor maritim dan logistik.
+            Comprehensive solutions driving efficiency and growth across maritime and logistics sectors.
           </motion.p>
         </div>
       </section>
@@ -113,7 +113,7 @@ export default function Services() {
                   </div>
 
                   <button className="mt-8 sm:mt-10 text-[#D00C27] font-bold flex items-center hover:space-x-2 transition-all text-sm sm:text-base">
-                    <span>Ketahui Lebih Lanjut</span>
+                    <span>Learn More</span>
                     <ChevronRight size={20} />
                   </button>
                 </div>

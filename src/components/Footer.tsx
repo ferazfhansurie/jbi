@@ -14,35 +14,35 @@ export default function Footer() {
           <div>
             <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white">JBI</h3>
             <p className="text-xs sm:text-sm mb-3 sm:mb-4 opacity-90">
-              Johor Bahru Integrated Sdn. Bhd.
+              A subsidiary of Johor Bahru Integrated Sdn. Bhd.
             </p>
             <p className="text-xs sm:text-sm opacity-75 leading-relaxed">
-              Syarikat infrastruktur strategik, logistik, maritim, dan fasilitasi ekonomi di Johor, Malaysia.
+              Strategic infrastructure, logistics, maritime, and economic facilitation company in Johor, Malaysia.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-[#D00C27]">Pautan Pantas</h4>
+            <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-[#D00C27]">Quick Links</h4>
             <ul className="space-y-2">
               <li>
                 <Link href="/" className="text-xs sm:text-sm hover:text-[#D00C27] transition-colors block py-1">
-                  Laman Utama
+                  Home
                 </Link>
               </li>
               <li>
                 <Link href="/about" className="text-xs sm:text-sm hover:text-[#D00C27] transition-colors block py-1">
-                  Mengenai Kami
+                  About Us
                 </Link>
               </li>
               <li>
                 <Link href="/services" className="text-xs sm:text-sm hover:text-[#D00C27] transition-colors block py-1">
-                  Perkhidmatan
+                  Services
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="text-xs sm:text-sm hover:text-[#D00C27] transition-colors block py-1">
-                  Hubungi Kami
+                  Contact Us
                 </Link>
               </li>
             </ul>
@@ -50,7 +50,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-[#D00C27]">Hubungi Kami</h4>
+            <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-[#D00C27]">Contact Us</h4>
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <MapPin size={16} className="mt-1 flex-shrink-0 text-[#D00C27] sm:w-[18px] sm:h-[18px]" />
@@ -78,7 +78,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center">
           <p className="text-xs sm:text-sm opacity-75 px-4">
-            © {currentYear} Johor Bahru Integrated Sdn. Bhd. (1592452-W). Hak Cipta Terpelihara.
+            © {currentYear} Johor Bahru Integrated Sdn. Bhd. (1592452-W). All Rights Reserved.
           </p>
         </div>
       </div>

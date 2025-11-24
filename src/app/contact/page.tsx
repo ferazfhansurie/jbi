@@ -15,7 +15,7 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-6xl font-bold mb-6"
           >
-            Hubungi Kami
+            Contact Us
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -23,7 +23,7 @@ export default function Contact() {
             transition={{ delay: 0.2 }}
             className="text-xl text-gray-300 max-w-3xl mx-auto"
           >
-            Berhubung dengan pasukan kami untuk membincangkan bagaimana kami boleh menyokong perniagaan anda.
+            A subsidiary of Johor Bahru Integrated Sdn Bhd. Connect with our team to discuss how we can support your business.
           </motion.p>
         </div>
       </section>
@@ -37,7 +37,7 @@ export default function Contact() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
             >
-              <h2 className="text-3xl font-bold text-[#002B5C] mb-8">Berhubung dengan Kami</h2>
+              <h2 className="text-3xl font-bold text-[#002B5C] mb-8">Get in Touch with Us</h2>
               
               <div className="space-y-8">
                 <div className="flex items-start space-x-6">
@@ -45,7 +45,7 @@ export default function Contact() {
                     <MapPin className="text-[#D00C27]" size={24} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Lawati Kami</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Us</h3>
                     <p className="text-gray-600 leading-relaxed">
                       Suite 31-03, Level 31, Menara JLand,<br />
                       Johor Bahru City Centre,<br />
@@ -59,11 +59,11 @@ export default function Contact() {
                     <Phone className="text-[#D00C27]" size={24} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Hubungi Kami</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Call Us</h3>
                     <p className="text-gray-600 mb-1">
                       <a href="tel:078277729" className="hover:text-[#D00C27] transition-colors">07-8277729</a>
                     </p>
-                    <p className="text-sm text-gray-500">Isnin-Jumaat dari 9 pagi hingga 6 petang</p>
+                    <p className="text-sm text-gray-500">Monday-Friday from 9 AM to 6 PM</p>
                   </div>
                 </div>
 
@@ -72,11 +72,11 @@ export default function Contact() {
                     <Mail className="text-[#D00C27]" size={24} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">E-mel Kami</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
                     <p className="text-gray-600">
                       <a href="mailto:info@jbi.com.my" className="hover:text-[#D00C27] transition-colors">info@jbi.com.my</a>
                     </p>
-                    <p className="text-sm text-gray-500">Kami akan membalas dalam 24 jam</p>
+                    <p className="text-sm text-gray-500">We will respond within 24 hours</p>
                   </div>
                 </div>
               </div>
@@ -96,52 +96,52 @@ export default function Contact() {
               transition={{ delay: 0.4 }}
               className="bg-gray-50 p-8 rounded-2xl shadow-lg border border-gray-100"
             >
-              <h2 className="text-2xl font-bold text-[#002B5C] mb-6">Hantar Mesej kepada Kami</h2>
+              <h2 className="text-2xl font-bold text-[#002B5C] mb-6">Send Us a Message</h2>
               <form className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Nama Pertama</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
                     <input 
                       type="text" 
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#D00C27] focus:border-transparent outline-none transition-all"
-                      placeholder="Ahmad"
+                      placeholder="John"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Nama Akhir</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
                     <input 
                       type="text" 
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#D00C27] focus:border-transparent outline-none transition-all"
-                      placeholder="Abdullah"
+                      placeholder="Doe"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Alamat E-mel</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
                   <input 
                     type="email" 
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#D00C27] focus:border-transparent outline-none transition-all"
-                    placeholder="ahmad@example.com"
+                    placeholder="john@example.com"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Subjek</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Subject</label>
                   <select className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#D00C27] focus:border-transparent outline-none transition-all bg-white">
-                    <option>Pertanyaan Umum</option>
-                    <option>Peluang Perkongsian</option>
-                    <option>Permintaan Perkhidmatan</option>
-                    <option>Lain-lain</option>
+                    <option>General Inquiry</option>
+                    <option>Partnership Opportunities</option>
+                    <option>Service Request</option>
+                    <option>Other</option>
                   </select>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Mesej</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
                   <textarea 
                     rows={4}
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#D00C27] focus:border-transparent outline-none transition-all resize-none"
-                    placeholder="Bagaimana kami boleh membantu anda?"
+                    placeholder="How can we help you?"
                   ></textarea>
                 </div>
 
@@ -149,7 +149,7 @@ export default function Contact() {
                   type="submit"
                   className="w-full bg-[#D00C27] text-white font-bold py-4 rounded-lg hover:bg-[#b00a20] transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 >
-                  Hantar Mesej
+                  Send Message
                 </button>
               </form>
             </motion.div>

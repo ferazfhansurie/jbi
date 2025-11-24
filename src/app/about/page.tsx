@@ -15,7 +15,7 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-6xl font-bold mb-6"
           >
-            Mengenai JBI
+            About JBI
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -23,7 +23,7 @@ export default function About() {
             transition={{ delay: 0.2 }}
             className="text-xl text-gray-300 max-w-3xl mx-auto"
           >
-            Memacu pertumbuhan Johor melalui penyelesaian maritim dan logistik bersepadu.
+            Driving Johor's growth through integrated maritime and logistics solutions.
           </motion.p>
         </div>
       </section>
@@ -37,13 +37,13 @@ export default function About() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-bold text-[#002B5C] mb-6">Siapa Kami</h2>
+              <h2 className="text-3xl font-bold text-[#002B5C] mb-6">Who We Are</h2>
               <div className="w-20 h-1 bg-[#D00C27] mb-8"></div>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Johor Bahru Integrated Sdn. Bhd. (JBI) adalah sebuah syarikat infrastruktur strategik, logistik, maritim, dan fasilitasi ekonomi yang berpangkalan di Johor, Malaysia.
+                Johor Bahru Integrated Sdn. Bhd. (JBI) is a strategic infrastructure, logistics, maritime, and economic facilitation company based in Johor, Malaysia.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Kami memberi tumpuan kepada pengukuhan daya saing serantau Johor melalui penyelesaian bersepadu merentas operasi terminal feri, logistik pantai, aktiviti kapal-ke-kapal, perdagangan barter, zon ekonomi khas, dan infrastruktur digital/telekomunikasi.
+                We focus on strengthening Johor's regional competitiveness through integrated solutions across ferry terminal operations, coastal logistics, ship-to-ship activities, barter trade, special economic zones, and digital/telecommunications infrastructure.
               </p>
             </motion.div>
             <motion.div
@@ -72,9 +72,9 @@ export default function About() {
               <div className="w-16 h-16 bg-[#002B5C]/10 rounded-xl flex items-center justify-center mb-6">
                 <Target className="text-[#002B5C]" size={32} />
               </div>
-              <h3 className="text-2xl font-bold text-[#002B5C] mb-4">Misi Kami</h3>
+              <h3 className="text-2xl font-bold text-[#002B5C] mb-4">Our Mission</h3>
               <p className="text-gray-600 leading-relaxed">
-                Untuk mempercepatkan pertumbuhan ekonomi Johor melalui penyelesaian infrastruktur maritim, logistik, dan digital yang inovatif yang mencipta nilai jangka panjang untuk negeri dan pihak berkepentingan.
+                To accelerate Johor's economic growth through innovative maritime, logistics, and digital infrastructure solutions that create long-term value for the state and stakeholders.
               </p>
             </motion.div>
 
@@ -85,9 +85,9 @@ export default function About() {
               <div className="w-16 h-16 bg-[#D00C27]/10 rounded-xl flex items-center justify-center mb-6">
                 <Eye className="text-[#D00C27]" size={32} />
               </div>
-              <h3 className="text-2xl font-bold text-[#002B5C] mb-4">Visi Kami</h3>
+              <h3 className="text-2xl font-bold text-[#002B5C] mb-4">Our Vision</h3>
               <p className="text-gray-600 leading-relaxed">
-                Untuk menjadi syarikat maritim dan logistik bersepadu terkemuka yang berasaskan Johor yang memberikan impak mampan merentas lautan, sempadan, dan komuniti.
+                To become the leading Johor-based integrated maritime and logistics company delivering sustainable impact across oceans, borders, and communities.
               </p>
             </motion.div>
           </div>
@@ -98,35 +98,35 @@ export default function About() {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-[#002B5C] mb-4">Nilai Teras Kami</h2>
+            <h2 className="text-3xl font-bold text-[#002B5C] mb-4">Our Core Values</h2>
             <div className="w-20 h-1 bg-[#D00C27] mx-auto"></div>
           </div>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { 
-                title: 'Integriti', 
-                desc: 'Komitmen teguh terhadap ketelusan dan kelakuan beretika.',
+                title: 'Integrity', 
+                desc: 'Strong commitment to transparency and ethical conduct.',
                 icon: Shield
               },
               { 
-                title: 'Perkongsian', 
-                desc: 'Membina pakatan yang berkekalan dengan pihak berkepentingan.',
+                title: 'Partnership', 
+                desc: 'Building sustainable alliances with stakeholders.',
                 icon: Handshake
               },
               { 
-                title: 'Impak', 
-                desc: 'Mencipta nilai ekonomi yang boleh diukur dan mampan.',
+                title: 'Impact', 
+                desc: 'Creating measurable and sustainable economic value.',
                 icon: Target
               },
               { 
-                title: 'Inovasi', 
-                desc: 'Mempelopori teknologi pintar dan model yang bersedia untuk masa depan.',
+                title: 'Innovation', 
+                desc: 'Pioneering smart technologies and future-ready models.',
                 icon: Lightbulb
               },
               { 
-                title: 'Akauntabiliti', 
-                desc: 'Mengambil pemilikan penuh terhadap hasil dan pematuhan kami.',
+                title: 'Accountability', 
+                desc: 'Taking full ownership of our results and compliance.',
                 icon: CheckCircle
               },
             ].map((value, index) => (

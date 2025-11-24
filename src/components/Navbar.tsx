@@ -20,10 +20,10 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { href: '/', label: 'Laman Utama' },
-    { href: '/about', label: 'Mengenai Kami' },
-    { href: '/services', label: 'Perkhidmatan' },
-    { href: '/contact', label: 'Hubungi Kami' },
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About Us' },
+    { href: '/services', label: 'Services' },
+    { href: '/contact', label: 'Contact Us' },
   ];
 
   return (
@@ -103,7 +103,7 @@ export default function Navbar() {
                 </a>
                 <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
                   <button className="w-full mt-3 bg-[#D00C27] hover:bg-[#b00a20] active:bg-[#900818] text-white px-6 py-3.5 rounded-lg font-bold text-base uppercase tracking-wider transition-colors touch-manipulation active:scale-98 shadow-lg">
-                    Dapatkan Sebut Harga
+                    Get a Quote
                   </button>
                 </Link>
               </div>
