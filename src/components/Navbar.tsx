@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
@@ -21,57 +21,69 @@ export default function Navbar() {
 
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/about', label: 'About Us' },
+    { href: '/about', label: 'About' },
     { href: '/services', label: 'Services' },
-    { href: '/contact', label: 'Contact Us' },
+    { href: '/contact', label: 'Contact' },
   ];
 
   return (
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full',
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-500 w-full',
         isScrolled
-          ? 'bg-[#002B5C] shadow-lg'
-          : 'bg-transparent'
+          ? 'bg-white shadow-md'
+          : 'bg-white/98 backdrop-blur-sm'
       )}
     >
-      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 w-full">
-        <div className="flex items-center justify-between h-16 sm:h-20 w-full">
-          {/* Brand/Logo Text */}
-          <Link href="/" className="flex items-center space-x-2 group flex-shrink-0">
-       
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full">
+        <div className="flex items-center justify-between h-24 w-full">
+          {/* Logo */}
+          <Link href="/" className="flex items-center group flex-shrink-0">
+            <div className="relative">
+              <span className="text-3xl font-light tracking-tighter text-[#002B5C] transition-colors duration-300 group-hover:text-[#003d7a]">
+                JB<span className="font-semibold">I</span>
+              </span>
+              <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#D00C27] group-hover:w-full transition-all duration-300"></div>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
+          <div className="hidden lg:flex items-center space-x-2">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-white hover:text-[#D00C27] transition-colors duration-200 font-medium text-xs lg:text-sm uppercase tracking-wide relative group"
+                className="px-5 py-2 text-[#002B5C] hover:text-[#D00C27] transition-colors duration-300 font-normal text-[15px] relative group"
               >
                 {link.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#D00C27] transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute bottom-0 left-5 right-5 h-[2px] bg-[#D00C27] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center"></span>
               </Link>
             ))}
-            <div className="flex items-center space-x-3 lg:space-x-4 pl-3 lg:pl-4 border-l border-white/20">
-              <a href="tel:+60782277729" className="flex items-center space-x-2 text-white hover:text-[#D00C27] transition-colors">
-                <Phone size={14} className="lg:w-4 lg:h-4" />
-                <span className="font-semibold text-xs lg:text-sm">07-8277729</span>
-              </a>
-           
-            </div>
+          </div>
+
+          {/* CTA Button */}
+          <div className="hidden lg:flex items-center">
+            <Link href="/contact">
+              <motion.button 
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="px-8 py-3 bg-[#002B5C] text-white text-sm font-medium hover:bg-[#003d7a] transition-all duration-300 tracking-wide"
+              >
+                Get Started
+              </motion.button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-colors touch-manipulation active:scale-95 flex-shrink-0"
+            className="lg:hidden text-[#002B5C] p-2.5 hover:bg-gray-100 rounded-sm transition-colors touch-manipulation flex-shrink-0"
             aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+            {isMobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
           </button>
         </div>
       </div>
@@ -83,27 +95,24 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-[#002B5C] border-t border-white/10"
+            transition={{ duration: 0.3 }}
+            className="lg:hidden bg-white border-t border-gray-200"
           >
-            <div className="px-4 py-4 sm:py-6 space-y-1">
+            <div className="px-6 py-6 space-y-2">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block text-white hover:bg-white/10 hover:text-[#D00C27] transition-all duration-200 py-3 px-4 font-medium rounded-lg text-base touch-manipulation active:scale-98"
+                  className="block text-[#002B5C] hover:text-[#D00C27] hover:bg-gray-50 transition-all duration-200 py-4 px-5 font-normal text-base rounded-sm touch-manipulation"
                 >
                   {link.label}
                 </Link>
               ))}
-              <div className="pt-4 mt-4 border-t border-white/10">
-                <a href="tel:+60782277729" className="flex items-center space-x-3 text-white hover:bg-white/10 py-3 px-4 rounded-lg transition-all touch-manipulation active:scale-98">
-                  <Phone size={20} />
-                  <span className="font-semibold text-base">07-8277729</span>
-                </a>
+              <div className="pt-4 mt-4 border-t border-gray-200">
                 <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
-                  <button className="w-full mt-3 bg-[#D00C27] hover:bg-[#b00a20] active:bg-[#900818] text-white px-6 py-3.5 rounded-lg font-bold text-base uppercase tracking-wider transition-colors touch-manipulation active:scale-98 shadow-lg">
-                    Get a Quote
+                  <button className="w-full bg-[#002B5C] hover:bg-[#003d7a] text-white px-6 py-4 text-base font-medium transition-colors touch-manipulation">
+                    Get Started
                   </button>
                 </Link>
               </div>

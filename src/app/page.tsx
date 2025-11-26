@@ -78,11 +78,9 @@ export default function Home() {
       <LoadingScreen />
       
       {/* Hero Section */}
-      <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden w-full">
+      <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden w-full">
         {/* Video Background */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-[#002B5C]/70 z-10"></div>
-          {/* Hero Video Background */}
           <video 
             autoPlay 
             loop 
@@ -92,202 +90,183 @@ export default function Home() {
             poster="/hero-poster.jpg"
           >
             <source src="/hero.mp4" type="video/mp4" />
-            {/* Fallback if video fails or isn't present */}
-            <div className="w-full h-full bg-[url('/hero-bg.jpg')] bg-cover bg-center"></div>
           </video>
+          {/* Darker overlay for better text readability */}
+          <div className="absolute inset-0 bg-black/40"></div>
         </div>
 
-        {/* Content */}
-        <div className="relative z-20 max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 text-center w-full">
+        {/* Content - Centered */}
+        <div className="relative z-20 max-w-5xl mx-auto px-6 lg:px-8 w-full text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 2.2 }} // Delay after loading screen
+            transition={{ duration: 1, delay: 2.2 }}
           >
-        
+            {/* Subtitle */}
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 2.5 }}
+              className="text-white text-sm sm:text-base font-light tracking-[0.3em] uppercase mb-6"
+              style={{ textShadow: '0 2px 8px rgba(0,0,0,0.5)' }}
+            >
+              Johor Bahru Integrated
+            </motion.p>
 
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight px-4 max-w-full break-words">
-              Integrating Oceans, Trade <br className="hidden sm:block"/>
-              <span className="text-[#D00C27]">& Technology</span> for Johor's Future
+            {/* Main Headline */}
+            <h1 
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-white mb-8 leading-[1.15] tracking-tight"
+              style={{ textShadow: '0 4px 12px rgba(0,0,0,0.6)' }}
+            >
+              INTEGRATING OCEANS,<br/>
+              TRADE & TECHNOLOGY
             </h1>
 
-            <p className="text-base sm:text-lg md:text-xl text-gray-200 mb-6 sm:mb-8 max-w-2xl mx-auto font-light px-4">
-              A subsidiary of Johor Bahru Integrated Sdn Bhd - Leading maritime and logistics company delivering sustainable impact.
+            {/* Subheadline */}
+            <p 
+              className="text-lg sm:text-xl md:text-2xl text-white font-light mb-12 max-w-3xl mx-auto leading-relaxed"
+              style={{ textShadow: '0 2px 8px rgba(0,0,0,0.5)' }}
+            >
+              Creating Value and Enabling Sustainable Communities
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 px-4">
-              <Link href="/services" className="w-full sm:w-auto">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-full sm:w-auto bg-[#D00C27] text-white px-6 sm:px-8 py-4 rounded-lg font-bold hover:bg-[#b00a20] transition-colors flex items-center justify-center space-x-2 min-w-[180px] text-sm sm:text-base uppercase tracking-wide shadow-lg"
-                >
-                  <span>Explore Services</span>
-                  <ChevronRight size={20} />
-                </motion.button>
-              </Link>
-              <Link href="/contact" className="w-full sm:w-auto">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-full sm:w-auto bg-transparent border-2 border-white text-white px-6 sm:px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-[#002B5C] transition-all flex items-center justify-center space-x-2 min-w-[180px] text-sm sm:text-base uppercase tracking-wide"
-                >
-                  <Phone size={20} />
-                  <span>Contact Us</span>
-                </motion.button>
-              </Link>
-            </div>
-
-            {/* Stats Row */}
-            <div className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-6 max-w-2xl mx-auto border-t border-white/20 pt-6 px-3 sm:px-4">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center min-w-0">
-                  <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-1 truncate">{stat.value}</div>
-                  <div className="text-[9px] sm:text-[10px] md:text-xs text-gray-300 uppercase tracking-wider break-words leading-tight">{stat.label}</div>
-                </div>
-              ))}
-            </div>
+            {/* CTA Button */}
+            <Link href="/services">
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="px-10 py-4 bg-transparent border-2 border-white text-white text-base font-normal tracking-wider hover:bg-white hover:text-[#002B5C] transition-all duration-300 uppercase"
+              >
+                Discover More
+              </motion.button>
+            </Link>
           </motion.div>
         </div>
+
+        {/* Scroll Indicator */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 3.5 }}
+          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20"
+        >
+          <motion.div
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            className="text-white/60 text-xs tracking-widest"
+          >
+            ↓
+          </motion.div>
+        </motion.div>
       </section>
 
       {/* Corporate Overview Section */}
-      <section className="py-20 bg-white relative overflow-hidden w-full">
-        {/* Background Video */}
-        <div className="absolute inset-0 z-0">
-          <video 
-            autoPlay 
-            loop 
-            muted 
-            playsInline 
-            className="w-full h-full object-cover opacity-10"
-          >
-            <source src="/corporate.mp4" type="video/mp4" />
-          </video>
-          <div className="absolute inset-0 bg-gradient-to-b from-white via-white/95 to-white"></div>
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="py-32 lg:py-40 bg-white relative overflow-hidden w-full">
+        <div className="max-w-6xl mx-auto px-6 lg:px-12 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12 px-4"
+            className="max-w-4xl mx-auto text-center"
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#002B5C] mb-4 sm:mb-6">Corporate Overview</h2>
-            <div className="w-16 sm:w-20 h-1 bg-[#D00C27] mx-auto mb-6 sm:mb-8"></div>
-            <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
-              Johor Bahru Integrated Sdn. Bhd. (JBI) is a strategic infrastructure, logistics, maritime, and economic facilitation company based in Johor, Malaysia. JBI focuses on strengthening Johor's regional competitiveness through integrated solutions across ferry terminal operations, coastal logistics, ship-to-ship activities, barter trade, special economic zones, and digital/telecommunications infrastructure.
-            </p>
-            <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto mt-4">
-              With strong engagement across government agencies, investors, and industry partners, JBI supports Johor's vision to become a leading maritime and logistics hub within the Johor-Singapore Special Economic Zone (JS-SEZ) and southern economic corridor.
-            </p>
+            <span className="text-[#002B5C]/60 font-light tracking-[0.3em] text-xs uppercase mb-6 block">
+              Who We Are
+            </span>
+            <h2 className="text-4xl lg:text-6xl font-light text-[#002B5C] mb-12 leading-tight">
+              Building Johor's Maritime Future
+            </h2>
+            <div className="space-y-8 text-xl text-gray-600 font-light leading-relaxed">
+              <p>
+                Johor Bahru Integrated Sdn. Bhd. (JBI) is a strategic infrastructure, logistics, maritime, and economic facilitation company driving Johor's transformation into a premier regional hub.
+              </p>
+              <p>
+                Through integrated solutions spanning ferry terminals, coastal logistics, ship-to-ship operations, and digital infrastructure, we strengthen Johor's competitive edge within the Johor-Singapore Special Economic Zone.
+              </p>
+            </div>
           </motion.div>
         </div>
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100 relative overflow-hidden w-full">
-        {/* Background pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-0 left-0 w-64 h-64 bg-[#002B5C] rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#D00C27] rounded-full blur-3xl"></div>
-        </div>
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="py-32 lg:py-40 bg-gray-50 relative overflow-hidden w-full">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12 sm:mb-16 px-4"
+            className="text-center mb-20"
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#002B5C] mb-4">Our Direction</h2>
-            <div className="w-16 sm:w-20 h-1 bg-[#D00C27] mx-auto"></div>
+            <span className="text-[#002B5C]/60 font-light tracking-[0.3em] text-xs uppercase mb-6 block">
+              Our Direction
+            </span>
+            <h2 className="text-4xl lg:text-6xl font-light text-[#002B5C] leading-tight">
+              Mission & Vision
+            </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 max-w-6xl mx-auto">
             {/* Mission Card */}
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="group relative overflow-hidden rounded-2xl shadow-2xl"
+              className="bg-white p-12 lg:p-16 group hover:shadow-xl transition-all duration-500"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-[#002B5C] to-[#003d7a]"></div>
-              <div className="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDEwIEwgNjAgMTAgTSAxMCAwIEwgMTAgNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')]"></div>
-              
-              <div className="relative z-10 p-6 sm:p-8 lg:p-10 text-white">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white/10 rounded-xl flex items-center justify-center backdrop-blur-sm">
-                    <Target className="text-white" size={28} />
-                  </div>
-                  <h3 className="text-2xl sm:text-3xl font-bold ml-3 sm:ml-4">Mission</h3>
-                </div>
-                <p className="text-base sm:text-lg leading-relaxed text-gray-100">
-                  To accelerate Johor's economic growth through innovative maritime, logistics, and digital infrastructure solutions that create long-term value for the state and stakeholders.
-                </p>
-                <div className="mt-6 h-1 w-20 bg-white/30 group-hover:w-40 transition-all duration-500"></div>
+              <div className="mb-8">
+                <Target className="text-[#002B5C] w-12 h-12" strokeWidth={1.5} />
               </div>
+              <h3 className="text-3xl font-light text-[#002B5C] mb-6">
+                Mission
+              </h3>
+              <p className="text-lg text-gray-600 leading-relaxed font-light">
+                To accelerate Johor's economic growth through innovative maritime, logistics, and digital infrastructure solutions that create long-term value for the state and stakeholders.
+              </p>
             </motion.div>
 
             {/* Vision Card */}
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="group relative overflow-hidden rounded-2xl shadow-2xl"
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-white p-12 lg:p-16 group hover:shadow-xl transition-all duration-500"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-[#D00C27] to-[#a00a20]"></div>
-              <div className="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDEwIEwgNjAgMTAgTSAxMCAwIEwgMTAgNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')]"></div>
-              
-              <div className="relative z-10 p-6 sm:p-8 lg:p-10 text-white">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white/10 rounded-xl flex items-center justify-center backdrop-blur-sm">
-                    <Eye className="text-white" size={28} />
-                  </div>
-                  <h3 className="text-2xl sm:text-3xl font-bold ml-3 sm:ml-4">Vision</h3>
-                </div>
-                <p className="text-base sm:text-lg leading-relaxed text-gray-100">
-                  To become the leading Johor-based integrated maritime and logistics company delivering sustainable impact across oceans, borders, and communities.
-                </p>
-                <div className="mt-6 h-1 w-20 bg-white/30 group-hover:w-40 transition-all duration-500"></div>
+              <div className="mb-8">
+                <Eye className="text-[#D00C27] w-12 h-12" strokeWidth={1.5} />
               </div>
+              <h3 className="text-3xl font-light text-[#002B5C] mb-6">
+                Vision
+              </h3>
+              <p className="text-lg text-gray-600 leading-relaxed font-light">
+                To become the leading Johor-based integrated maritime and logistics company delivering sustainable impact across oceans, borders, and communities.
+              </p>
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* Core Values */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-white w-full overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-12 gap-8 sm:gap-12 items-start">
-            {/* Title Column */}
-            <div className="lg:col-span-4 lg:sticky lg:top-24">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-              >
-                <span className="text-[#D00C27] font-bold tracking-wider uppercase text-xs sm:text-sm mb-2 block">Our Culture</span>
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#002B5C] mb-4 sm:mb-6 leading-tight">
-                  Principles That <br/>
-                  <span className="text-[#D00C27]">Define Us</span>
-                </h2>
-                <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 leading-relaxed">
-                  We uphold the highest standards in conduct and performance, ensuring every project we undertake delivers lasting value for Johor.
-                </p>
-                <div className="hidden lg:block w-20 h-1.5 bg-[#002B5C] rounded-full"></div>
-              </motion.div>
-            </div>
+      <section className="py-32 lg:py-40 bg-white w-full overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-20"
+          >
+            <span className="text-[#002B5C]/60 font-light tracking-[0.3em] text-xs uppercase mb-6 block">
+              Our Values
+            </span>
+            <h2 className="text-4xl lg:text-6xl font-light text-[#002B5C] leading-tight max-w-3xl mx-auto">
+              Principles That Define Us
+            </h2>
+          </motion.div>
 
-            {/* Values Grid */}
-            <div className="lg:col-span-8">
-              <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto">
                 {[
                   { 
                     title: 'Integrity', 
@@ -317,57 +296,49 @@ export default function Home() {
                 ].map((value, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: index * 0.1 }}
-                    className="group p-6 sm:p-8 bg-gray-50 hover:bg-[#002B5C] transition-all duration-300 rounded-xl border border-gray-100 hover:border-[#002B5C] hover:shadow-xl"
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="group p-10 bg-white border border-gray-100 hover:border-[#002B5C] hover:shadow-lg transition-all duration-300"
                   >
-                    <div className="mb-4 sm:mb-6 flex justify-between items-start">
-                      <div className="p-2.5 sm:p-3 bg-white rounded-lg shadow-sm group-hover:bg-white/10 transition-colors">
-                        <value.icon className="w-5 h-5 sm:w-6 sm:h-6 text-[#D00C27] group-hover:text-white transition-colors" strokeWidth={2} />
-                      </div>
-                      <span className="text-3xl sm:text-4xl font-bold text-gray-200 group-hover:text-white/10 transition-colors">0{index + 1}</span>
+                    <div className="mb-6">
+                      <value.icon className="w-10 h-10 text-[#002B5C] group-hover:text-[#D00C27] transition-colors" strokeWidth={1.5} />
                     </div>
-                    <h3 className="text-lg sm:text-xl font-bold text-[#002B5C] group-hover:text-white mb-2 sm:mb-3 transition-colors">
+                    <h3 className="text-xl font-light text-[#002B5C] mb-3">
                       {value.title}
                     </h3>
-                    <p className="text-sm text-gray-600 group-hover:text-gray-300 transition-colors leading-relaxed">
+                    <p className="text-base text-gray-600 leading-relaxed font-light">
                       {value.desc}
                     </p>
                   </motion.div>
                 ))}
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
       {/* Business Pillars */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-[#002B5C] text-white relative overflow-hidden w-full">
-        {/* Background Elements */}
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 opacity-10">
-           <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-[#D00C27] blur-3xl"></div>
-           <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black to-transparent"></div>
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="py-32 lg:py-40 bg-[#002B5C] text-white relative overflow-hidden w-full">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12 sm:mb-16 lg:mb-20"
+            className="text-center mb-20"
           >
-            <span className="text-[#D00C27] font-bold tracking-wider uppercase text-xs sm:text-sm mb-2 block">Our Expertise</span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">Business Pillars</h2>
-            <div className="w-20 sm:w-24 h-1.5 bg-[#D00C27] mx-auto mb-6 sm:mb-8 rounded-full"></div>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto font-light px-4">
-              Delivering strategic integrated solutions across six core pillars to drive Johor's economic engine.
+            <span className="text-white/60 font-light tracking-[0.3em] text-xs uppercase mb-6 block">
+              Our Expertise
+            </span>
+            <h2 className="text-4xl lg:text-6xl font-light mb-6 leading-tight">
+              Business Pillars
+            </h2>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto font-light">
+              Six integrated solutions driving Johor's maritime and logistics transformation
             </p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={index}
@@ -375,29 +346,28 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group bg-white/5 backdrop-blur-md rounded-2xl overflow-hidden border border-white/10 hover:border-[#D00C27]/50 transition-all duration-300 hover:shadow-2xl hover:shadow-[#D00C27]/10 hover:-translate-y-1"
+                className="group bg-white text-[#002B5C] overflow-hidden hover:shadow-2xl transition-all duration-500"
               >
-                {/* Image Placeholder Area */}
-                <div className="h-40 sm:h-48 bg-gray-800 relative overflow-hidden group-hover:opacity-90 transition-opacity">
-                  {/* Pillar Image */}
+                {/* Image */}
+                <div className="h-56 bg-gray-200 relative overflow-hidden">
                   <img 
                     src={service.image} 
                     alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#002B5C] to-transparent opacity-80"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#002B5C]/80 to-transparent"></div>
                   
-                  {/* Icon Overlay */}
-                  <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-[#D00C27] flex items-center justify-center shadow-lg z-10 group-hover:rotate-6 transition-transform duration-300">
-                    <service.icon className="text-white" size={24} />
+                  {/* Icon */}
+                  <div className="absolute bottom-6 left-6 w-14 h-14 bg-white flex items-center justify-center">
+                    <service.icon className="text-[#002B5C]" size={28} strokeWidth={1.5} />
                   </div>
                 </div>
 
-                <div className="p-6 sm:p-8 pt-8 sm:pt-10">
-                  <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 group-hover:text-[#D00C27] transition-colors">{service.title}</h3>
-                  <p className="text-gray-300 leading-relaxed mb-4 sm:mb-6 text-sm">{service.description}</p>
+                <div className="p-8">
+                  <h3 className="text-2xl font-light mb-4 leading-tight">{service.title}</h3>
+                  <p className="text-gray-600 leading-relaxed mb-6 font-light">{service.description}</p>
                   
-                  <Link href="/services" className="flex items-center text-[#D00C27] font-semibold text-sm uppercase tracking-wide group/btn cursor-pointer">
+                  <Link href="/services" className="inline-flex items-center text-[#002B5C] font-normal text-sm uppercase tracking-wider group/btn hover:text-[#D00C27] transition-colors">
                     <span>Learn More</span>
                     <ChevronRight size={16} className="ml-1 group-hover/btn:translate-x-1 transition-transform" />
                   </Link>
