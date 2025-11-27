@@ -42,12 +42,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-24 w-full">
           {/* Logo */}
           <Link href="/" className="flex items-center group flex-shrink-0">
-            <div className="relative">
-              <span className="text-3xl font-light tracking-tighter text-[#002B5C] transition-colors duration-300 group-hover:text-[#003d7a]">
-                JB<span className="font-semibold">I</span>
-              </span>
-              <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#D00C27] group-hover:w-full transition-all duration-300"></div>
-            </div>
+            <img 
+              src="/jbi-logo.jpg" 
+              alt="JBI - Johor Bahru Integrated Sdn. Bhd." 
+              className="h-16 w-auto transition-opacity duration-300 group-hover:opacity-80"
+            />
           </Link>
 
           {/* Desktop Navigation */}

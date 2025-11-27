@@ -57,9 +57,11 @@ export default function LoadingScreen() {
                   ease: "easeInOut"
                 }}
               >
-                <span className="text-6xl font-light tracking-tighter text-[#002B5C]">
-                  JB<span className="font-semibold">I</span>
-                </span>
+                <img 
+                  src="/jbi-logo.jpg" 
+                  alt="JBI - Johor Bahru Integrated Sdn. Bhd." 
+                  className="h-24 w-auto"
+                />
               </motion.div>
             </motion.div>
 
